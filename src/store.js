@@ -10,7 +10,10 @@ export { history };
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const enhancer = composeEnhancers(
-  applyMiddleware(routerMiddleware(history))
+  applyMiddleware(
+    routerMiddleware(history),
+    thunk
+  )
 );
 
 const connectedRouter = connectRouter(history)(reducer)
