@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
-import AdminPage from './AdminPage';
-import AuthPage from './AuthPage';
+import AdminPage from './routes/AdminPage';
+import AuthPage from './routes/AuthPage';
 
 class Root extends Component {
   render() {
@@ -10,7 +10,7 @@ class Root extends Component {
       <Fragment>
         <Route path="/admin" component={AdminPage}/>
         <Route path="/auth" component={AuthPage}/>
-        <Redirect exact from="/" to="/auth"/>
+        <Redirect exact from="/admin" to="/auth"/>
       </Fragment>
     );
   }

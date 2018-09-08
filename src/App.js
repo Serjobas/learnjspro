@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter} from 'connected-react-router'
 
-import Root from './routes';
+import Root from './components/Root';
 
 import store, { history } from './store';
 
