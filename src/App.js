@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter} from 'connected-react-router'
 
-import Root from './components/Root';
+import Routes from './components/Routes';
 
 import store, { history } from './store';
 
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <ConnectedRouter history={history}>
-          <Root />
+          <Routes />
         </ConnectedRouter>
       </Provider>
     );
